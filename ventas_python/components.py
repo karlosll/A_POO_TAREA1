@@ -1,3 +1,4 @@
+#-----------------------------------------------------
 from utilities import borrarPantalla, gotoxy
 import time
 
@@ -17,6 +18,7 @@ class Menu:
         gotoxy(self.col+5,self.fil+2)
         opc = input(f"Elija opcion[1...{len(self.opciones)}]: ") 
         return opc   
+    
 
 class Valida:
     def solo_numeros(self,mensajeError,col,fil):
@@ -31,14 +33,6 @@ class Valida:
                 time.sleep(1)
                 gotoxy(col,fil);print(" "*20)
         return valor
-#---------------------------------------------
-
-
-
-
-
-
-
 
 #-----------------
 
@@ -69,13 +63,41 @@ class Valida:
 
 
 
+    def ecuadorian_id_base_10(func):
+        def wrapper(*args, **kwargs):
+            mensajeError = "ERROR:Cédula no válida."
+            while True:
+                valor = func(*args, **kwargs)
+                if valor.isdigit() and len(valor) == 10:
+                    # Verificar si es cédula ecuatoriana
+                    primer_digito = int(valor[0])
+                    if primer_digito >= 0 and primer_digito <= 5:
+                        return valor
+                gotoxy(args[2], args[3])
+                print(mensajeError)
+                time.sleep(1)
+                gotoxy(args[2], args[3])
+                print(" " * 50)
+        return wrapper
+    
+    @ecuadorian_id_base_10
+    def cedula(self,mensajeError,col,fil):
+        while True:
+            #gotoxy(col, fil)
+            valor = input("Ingrese el DNI del Cliente: ")
+            if valor.isdigit() and len(valor) == 10:
+                break
+            else:
+                gotoxy(col,fil);print(mensajeError)
+                time.sleep(1)
+                gotoxy(col,fil);print(" "*50)
+        return valor
 
 #@agregar decorador---------------    
-    def cedula():
-        pass
+  #  def cedula():
+   #     pass
     
-class otra:
-    pass    
+ 
 
 if __name__ == '__main__':
     # instanciar el menu
