@@ -1,0 +1,96 @@
+[
+    {
+        "factura": 1,
+        "Fecha": "2024-04-22",
+        "cliente": "Daniel Vera",
+        "subtotal": 10.0,
+        "descuento": 1.0,
+        "iva": 1.08,
+        "total": 10.08,
+        "detalle": [
+            {
+                "poducto": "aceite",
+                "precio": 2.0,
+                "cantidad": 2
+            },
+            {
+                "poducto": "Coca Cola",
+                "precio": 1.5,
+                "cantidad": 4
+            }
+        ]
+    },
+    {
+        "factura": 2,
+        "Fecha": "2024-04-22",
+        "cliente": "Daniel Vera",
+        "subtotal": 16.0,
+        "descuento": 1.6,
+        "iva": 1.73,
+        "total": 16.13,
+        "detalle": [
+            {
+                "poducto": "aceite",
+                "precio": 2.0,
+                "cantidad": 2
+            },
+            {
+                "poducto": "Coca Cola",
+                "precio": 1.5,
+                "cantidad": 8
+            }
+        ]
+    },
+    {
+        "factura": 3,
+        "Fecha": "2024-04-28",
+        "cliente": "Daniel Vera",
+        "subtotal": 71.0,
+        "descuento": 7.1000000000000005,
+        "iva": 7.67,
+        "total": 71.57,
+        "detalle": [
+            {
+                "poducto": "Coca Cola",
+                "precio": 1.5,
+                "cantidad": 4
+            },
+            {
+                "poducto": "Mortadela",
+                "precio": 2.5,
+                "cantidad": 10
+            },
+            {
+                "poducto": "aceite",
+                "precio": 2.0,
+                "cantidad": 20
+            }
+        ]
+    },
+    {
+        "factura": 4,
+        "Fecha": "2024-05-01",
+        "cliente": "karlos llivis",
+        "subtotal": 4.1,
+        "descuento": 0.41,
+        "iva": 0.44,
+        "total": 4.13,
+        "detalle": [
+            {
+                "poducto": "sal",
+                "precio": 0.5,
+                "cantidad": 2
+            },
+            {
+                "poducto": "agua",
+                "precio": 0.5,
+                "cantidad": 3
+            },
+            {
+                "poducto": "maiz",
+                "precio": 0.2,
+                "cantidad": 8
+            }
+        ]
+    }
+]

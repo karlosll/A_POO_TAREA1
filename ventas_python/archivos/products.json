@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "descripcion": "aceite",
+        "precio": 2.0,
+        "stock": 1000
+    },
+    {
+        "id": 2,
+        "descripcion": "Coca Cola",
+        "precio": 1.5,
+        "stock": 2000
+    },
+    {
+        "id": 3,
+        "descripcion": "Mortadela",
+        "precio": 2.5,
+        "stock": 700
+    },
+    {
+        "id": 4,
+        "descripcion": "agua",
+        "precio": 0.5,
+        "stock": 100
+    },
+    {
+        "id": 5,
+        "descripcion": "sal",
+        "precio": 0.5,
+        "stock": 500
+    },
+    {
+        "id": 6,
+        "descripcion": "maiz",
+        "precio": 0.2,
+        "stock": 100
+    }
+]
