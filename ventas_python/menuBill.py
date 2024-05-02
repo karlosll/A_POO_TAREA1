@@ -23,14 +23,14 @@ class CrudClients(ICrud):
         gotoxy(2, 1); print(green_color + "█" * 90 + reset_color)
         gotoxy(2, 2); print("██" + " " * 34 + "Registro de Cliente" + " " * 34 + "██")
         
-        dni = input("Ingrese el DNI del cliente: ")
-    
+        #print("Ingrese DNI del cliente: ")
+        dni=validar.cedula("Error: 10 digitos",23,4)   
         
         nombre = input("Ingrese el nombre del cliente: ")
         apellido = input("Ingrese el apellido del cliente: ")
         valor = float(input("Ingrese el valor del cliente: "))
         
-        #---------------------------------
+        #---------------------------------sss
         json_file = JsonFile(path+'/archivos/clients.json')
         client = json_file.find("dni", dni)
         if client:
@@ -81,13 +81,14 @@ class CrudClients(ICrud):
                 nuevo_dni = input(f"DNI ({cliente_actualizar['dni']}): ") or cliente_actualizar['dni']
                 nuevo_nombre = input(f"Nombre ({cliente_actualizar['nombre']}): ") or cliente_actualizar['nombre']
                 nuevo_apellido = input(f"Apellido ({cliente_actualizar['apellido']}): ") or cliente_actualizar['apellido']
-                nuevo_valor = float(input(f"Valor ({cliente_actualizar['valor']}): ")) or cliente_actualizar['valor']
+                nuevo_valor = (input(f"Valor ({cliente_actualizar['valor']}): ")) or cliente_actualizar['valor']
                 
                 # Actualizar los datos del cliente
                 cliente_actualizar['dni'] = nuevo_dni
                 cliente_actualizar['nombre'] = nuevo_nombre
                 cliente_actualizar['apellido'] = nuevo_apellido
-                cliente_actualizar['valor'] = nuevo_valor
+                
+                cliente_actualizar['valor'] = float(nuevo_valor)
                 
                 # Guardar los cambios en el archivo JSON
                 json_file.save(clients)
@@ -530,4 +531,11 @@ while opc !='4':
 borrarPantalla()
 input("Presione una tecla para salir...")
 borrarPantalla()
+
+
+
+
+
+
+
 
